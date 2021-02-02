@@ -1,0 +1,104 @@
+body {
+  font: -apple-system-body;
+  padding: 0px 20px 0px;
+  margin: 0px;
+}
+
+a, a:link {
+  color: #0A7DA3;
+  text-decoration: none;
+  font: -apple-system-body;
+}
+
+h1 {
+  font: -apple-system-headline;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-bottom: .5em;
+}
+
+h2 {
+  font: -apple-system-subheadline;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-bottom: .5em;
+}
+
+h3 {
+  font: -apple-system-subheadline;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font: -apple-system-subheadline;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-bottom: .5em;
+}
+
+h5 {
+  font: -apple-system-subheadline;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-bottom: .5em;
+}
+
+
+
+p {
+  font: -apple-system-body;
+  line-height: 1.5em;
+  margin: 0 0 15px 0;
+  padding: 0px;
+  border: 0px;
+}
+
+
+ol {
+  list-style: number inside none;
+  margin: 5px 20px 5px 20px;
+  padding: 0;
+}
+
+ul {
+  list-style: disc inside none;
+  margin: 5px 10px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+.announcement-header {
+  color: rgb(70, 74, 80);
+  width : 100%;
+  margin : 0px;
+  padding : 10px 0px 0px 0px;
+}
+
+hr.announcement {
+  border: none;
+  height: 1px;
+  background: rgb(181, 181, 181);
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+}
+
+.announcement-separator {
+  border: none;
+  height: 10px;
+  background: rgb(226, 227, 229);
+  margin: 0px -20px 0px;
+  padding: 0px;
+}

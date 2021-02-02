@@ -1,0 +1,299 @@
+[
+    {
+        "version":"2.24",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"מראה ותחושה חדשים",
+                "message":"שמת לב למשהו שונה? חידשנו את האתר שלנו והוספנו עדכונים כדי שיהיה לך קל יותר להשיג את מטרות הלמידה שלך."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"כל מועדי הקורס במקום אחד",
+                "message":"תוכל לראות את כל מועדי הקורס החשובים במקום אחד, תחת הלשונית 'מועדים'. כדי שלעולם לא תחמיץ את מועד ההגשה!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"לוח זמני למידה מותאם אישית",
+                "message":"כעת לאחר שנרשמת לקורס למידה עצמית בקצב אישי, תוכל לראות את לוח זמני הלמידה המותאם אישית ואת מועדי ההגשה דרך הטלפון שלך. בנוסף, תוכל לשנות את מועדי ההגשה אם תצטרך להתאים את לוח הזמנים מחדש - הקורס שלך, בדרך שלך!"
+            }
+        ]
+    },
+    {
+        "version":"2.23",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"חווית גילוי משופרת"
+                "message":"שיפרנו את האופן בו אתה מחפש ונרשם לקורסים והתוכניות המועדפים עליך."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"כניסה של אפל"
+                "message":"עכשיו אתה יכול להשתמש במזהה Apple שלך כדי להירשם ולהיכנס לפלטפורמה שלנו. מתוק, לא?"
+            }
+        ]
+    },
+    {
+        "version":"2.22",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"אפשרויות מהירות הפעלה נוספות",
+                "message":"הוספנו אפשרויות נוספות לבקרת מהירות הווידיאו כדי לענות על הצרכים שלך."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"קדימה הקלד סרטונים",
+                "message":"שמענו אותך! כעת תוכלו להרים אחורה או להעביר סרטונים כדי להגיע לנקודה המדויקת בה זה חשוב."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"שיפורים לאייפד",
+                "message":"מסך הקורסים שלי מותאם כעת לעבודה על אייפד."
+            }
+        ]
+    },
+    {
+        "version":"2.21",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"תמיכה של Chromecast",
+                "message":"רוצה לצפות בסרטונים של הקורס על גבי מסך גדול יותר? הוספנו תמיכה ב-Chromecast ועכשיו זה אפשרי!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"נגן YouTube",
+                "message":"נמאס לך לצאת מהאפליקציה כדי לצפות בסרטונים של הקורס ב-YouTube? עכשיו אפשר להציג סרטונים בעזרת נגן מובנה באפליקציה."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"כניסת Microsoft",
+                "message":"עכשיו באפשרותך להירשם או להיכנס בעזרת חשבון Microsoft."
+            }
+        ]
+    },
+    {
+        "version":"2.20",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"תמיכה מורחבת בשפה",
+                "message":"כעת תוכלו לצפות באפליקציית edX בגרמנית, עברית, צרפתית, פורטוגזית, סינית וטורקית. היישום משתמש בשפת המכשיר שלך כדי לציין הגדרה זו."
+            }
+        ]
+    },
+    {
+        "version":"2.18",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Program & Degree Discovery",
+                "message":"You can now search edX programs and degrees using the mobile application!"
+            }
+        ]
+    },
+    {
+        "version":"2.16",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Programs on Mobile",
+                "message":"You can now view your edX programs on the go!"
+            }
+        ]
+    },
+    {
+        "version":"2.15",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Landscape and Rotation Support",
+                "message":"You can now rotate your iPhone or iPad for improved viewing on most areas of the application."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Show Popular Subjects in Course Discovery",
+                "message":"Browse courses by subject when you are looking for new learning experiences!"
+            }
+        ]
+    },
+    {
+        "version":"2.14",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Bulk Download Subsection Videos",
+                "message":"Easily download all videos within a subsection using the new toggle controls."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Improved Video Streaming Quality",
+                "message":"Video streaming quality will now adapt based on your network. Improve video quality even further by connecting to a WiFi network!"
+            }
+        ]
+    },
+    {
+        "version":"2.13",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Navigation",
+                "message":"Quickly access your courses or discover new courses using the new application navigation."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Bulk Video Download",
+                "message":"Easily download all videos within a course using the new toggle control."
+            }
+        ]
+    },
+    {
+        "version":"2.12",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Course Navigation",
+                "message":"Quickly jump to course videos, discussions, and important dates in your course using new in-course navigation."
+            }
+        ]
+    },
+    {
+        "version":"2.11",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Updated Navigation",
+                "message":"A simplified main menu makes it easier to access and discover courses."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Assignment Due Dates",
+                "message":"You can now see due dates for assignments in the course outline."
+            }
+        ]
+    },
+    {
+        "version":"2.10",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Videos",
+                "message":"The \"Videos\" tab in each course's menu replaces \"My Videos\" in the main menu. Now you can view all the videos in a course in one place!"
+            },
+            {
+                "platforms":[
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"In the list of downloaded course videos, use a long press to select videos that you want to delete."
+            },
+            {
+                "platforms":[
+                    "ios"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"Swipe left to delete downloaded videos."
+            }
+        ]
+    }
+]

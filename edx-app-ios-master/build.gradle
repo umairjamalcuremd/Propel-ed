@@ -1,0 +1,285 @@
+import com.dd.plist.*
+import org.edx.builder.TaskHelper
+
+// Dependencies
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.googlecode.plist:dd-plist:1.16'
+    }
+}
+
+apply plugin: 'edxapp'
+edx {
+    platform = IOS
+}
+
+// Configuration
+def workspace = 'edX.xcworkspace'
+def scheme = 'edX'
+
+class IOSHelper {
+    // Environment Variable Conveniences
+    // Only valid when our task is invoked by an Xcode build
+
+    def getInfoPlistPath() {
+        def env = System.getenv()
+        return env['INFOPLIST_PATH']
+    }
+
+    def getBuiltProductsPath() {
+        def env = System.getenv()
+        return env['BUILT_PRODUCTS_DIR']
+    }
+
+    def getWrapperName() {
+        def env = System.getenv()
+        return env['WRAPPER_NAME']
+    }
+
+    def getBundleIdentifier() {
+        def env = System.getenv()
+        return env['PRODUCT_BUNDLE_IDENTIFIER']
+    }
+
+    def getFirebaseInfoPlistPath() {
+        return builtProductsPath + '/' + wrapperName + '/' + 'GoogleService-Info.plist'
+    }
+
+    def getBuiltInfoPlistPath() {
+        return builtProductsPath + '/' + infoPlistPath
+    }
+
+    def getBundleConfigPath() {
+        return builtProductsPath + '/' + wrapperName + '/config.plist'
+    }
+    
+    def getFirebaseConfigPath() {
+        return builtProductsPath + '/' + wrapperName + '/firebase.plist'
+    }
+
+    // Saves our loaded and processed config YAML
+    // to a Plist in the app bundle
+    def saveProcessedConfig(config, toPath) {
+        def plist = [:]
+
+        for(c in config) {
+            plist[c.key] = c.value
+        }
+        // Save entire config
+        PropertyListParser.saveAsXML(NSObject.wrap(plist), new File(toPath))
+    }
+
+    // Modify Info.plist for specific services
+
+    def readInfoPlist(plistPath) {
+        // The configuration library doesn't know how to read
+        // binary plists so make sure it's an xml one
+        ['plutil', '-convert', 'xml1', plistPath].execute().waitFor()
+
+        def plist = PropertyListParser.parse(new File(plistPath)).toJavaObject()
+        return plist
+    }
+
+    def writeInfoPlist(plist, path) {
+        PropertyListParser.saveAsXML(NSObject.wrap(plist), new File(path))
+
+        // Restore to binary for runtime performance
+        ['plutil', '-convert', 'binary1', path].execute().waitFor()
+    }
+
+    def addURLScheme(scheme, plist) {
+        def body = [
+            'CFBundleTypeRole' : 'Editor',
+            'CFBundleURLSchemes' : scheme
+        ]
+
+        def existing = plist['CFBundleURLTypes']
+        if(existing) {
+            // make sure we don't add it more than once
+            def found = false
+            for(entry in existing){
+                def schemes = entry['CFBundleURLSchemes']
+                if(schemes && schemes.contains(scheme)){
+                    found = true
+                    break
+                }
+            }
+            if(!found) {
+                def types = new ArrayList((ArrayList)existing)
+                types.add(body)
+                plist['CFBundleURLTypes'] = types
+            }
+        }
+        else {
+            plist["CFBundleURLTypes"] = [body]
+        }
+    }
+
+    def addFacebookConfig(config, plist) {
+        def facebook = config['FACEBOOK'] ?: [:]
+        def key = facebook['FACEBOOK_APP_ID']
+        if(!key) {
+            return
+        }
+
+        plist["FacebookAppID"] = key
+        def scheme = ["fb" + key]
+        addURLScheme(scheme, plist)
+    }
+
+    def addFirebaseKeys(config, plist) {
+        def firebase = config['FIREBASE'] ?: [:]
+
+        plist['BUNDLE_ID'] = bundleIdentifier
+        def apiKey = firebase['API_KEY']
+        def clientID = firebase['CLIENT_ID']
+        def googleAppID = firebase['GOOGLE_APP_ID']
+        def GCMSenderID = firebase['GCM_SENDER_ID']
+
+        if(!apiKey || !clientID || !googleAppID || !GCMSenderID) {
+            return
+        }
+
+        plist['API_KEY'] = apiKey
+        plist['CLIENT_ID'] = clientID
+        plist['GOOGLE_APP_ID'] = googleAppID
+        plist['GCM_SENDER_ID'] = GCMSenderID
+
+        // set optional keys if present in config
+        def projectID = firebase['PROJECT_ID']
+        if (projectID) {
+            plist['PROJECT_ID'] = projectID
+            plist['STORAGE_BUCKET'] = projectID + '.appspot.com'
+            plist['DATABASE_URL'] = 'https://' + projectID + '.firebaseio.com'
+        }
+
+        def reversedCliendID = firebase['REVERSED_CLIENT_ID']
+        if (reversedCliendID) {
+            plist['REVERSED_CLIENT_ID'] = reversedCliendID
+        }
+    }
+
+    def addGoogleConfig(config, plist) {
+        def google = config['GOOGLE'] ?: [:]
+
+        def key = google['GOOGLE_PLUS_KEY']
+        if(!key) {
+            return
+        }
+
+        // Google login schemes are the reverse DNS of the api key
+        def scheme = [key.tokenize('.').reverse().join('.')]
+        addURLScheme(scheme, plist)
+    }
+
+    def addMicrosoftConfig(config, plist) {
+        def microsoft = config['MICROSOFT'] ?: [:] 
+        def key = microsoft['APP_ID']
+        if(!key) {
+           return
+        }
+        def scheme = ["msauth." + bundleIdentifier] 
+        addURLScheme(scheme, plist)
+   }
+
+}
+
+
+// Tasks 
+task printBuildEnvironment(type : Exec) {
+    def arguments = [
+        'xcodebuild',
+        '-workspace', workspace,
+        '-scheme', scheme,
+        '-showBuildSettings'
+    ]
+    commandLine arguments
+}
+
+task applyConfig doLast {
+    processDefaultInfoPlist()
+    processFirebaseInfoPlist()
+}
+
+def processDefaultInfoPlist() {
+    def (config, helper, plist, infoPlistPath, plistPath) = getConfigProcessHelpers(false)
+    helper.addFacebookConfig(config, plist)
+    helper.addGoogleConfig(config, plist)
+    helper.addMicrosoftConfig(config, plist)
+    saveConfigChanges(helper, plist, infoPlistPath, plistPath)
+}
+
+def processFirebaseInfoPlist() {
+    def (config, helper, plist, infoPlistPath, plistPath) = getConfigProcessHelpers(true)
+    helper.addFirebaseKeys(config, plist)
+    saveConfigChanges(helper, plist, infoPlistPath, plistPath)
+}
+
+def getConfigProcessHelpers(isFirebase) {
+    def taskHelper = new TaskHelper()
+    def config = taskHelper.loadConfig(project)
+    def helper = new IOSHelper()
+    def infoPlistPath = helper.builtInfoPlistPath
+    def plistPath = helper.bundleConfigPath
+
+    if (isFirebase) {
+        plistPath = helper.firebaseConfigPath
+        infoPlistPath = helper.firebaseInfoPlistPath
+    }
+    helper.saveProcessedConfig(config, plistPath)
+    def plist = helper.readInfoPlist(infoPlistPath)
+
+    return [config, helper, plist, infoPlistPath, plistPath]
+}
+
+def saveConfigChanges(helper, plist, infoPlistPath, plistPath) {
+    helper.writeInfoPlist(plist, infoPlistPath)
+
+    // double check that the config file actually got made
+    def check = ["[", "-f", plistPath, "]"].execute()
+    check.waitFor()
+
+    def result = check.exitValue()
+    assert result == 0
+}
+
+wrapper {
+    gradleVersion = '6.3'
+}
+
+def testBuildArguments(workspace, scheme, OS, record) {
+    def args = [
+        'xcodebuild', '-workspace', workspace, '-scheme', scheme, '-sdk', 'iphonesimulator', '-destination', 'platform=iOS Simulator,name=iPhone 8,OS=' + OS, 'test'
+    ]
+    if(record) {
+        args += ["OTHER_SWIFT_FLAGS=\$(OTHER_SWIFT_FLAGS) -D RECORD_SNAPSHOTS"]
+    }
+    return args
+}
+
+def RTLSchemeForScheme(scheme) {
+    return scheme + '-RTL'
+}
+
+def operatingSystems = ["currentOS": "13.3", "previousOS": "12.4"]
+def directions = ["LTR": scheme, "RTL": RTLSchemeForScheme(scheme)]
+def commands = ["test" : ["record" : false], "recordSnapshots": ["record" : true]] 
+
+for(OS in operatingSystems) {
+    for(direction in directions) {
+        for(command in commands) {
+            def record = command.value["record"]
+            def task = project.task(type: Exec, command.key + direction.key.capitalize() + OS.key.capitalize()) {
+                commandLine testBuildArguments(workspace, direction.value, OS.value, record)
+            }
+        }
+    }
+}
+
+
+task test(dependsOn: tasks.findAll { task -> task.name.startsWith('test')}) {}
+task recordSnapshots(dependsOn: tasks.findAll { task -> task.name.startsWith('recordSnapshots')}) {}

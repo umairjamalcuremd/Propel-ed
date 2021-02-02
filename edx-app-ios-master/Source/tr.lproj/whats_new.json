@@ -1,0 +1,299 @@
+[
+    {
+        "version":"2.24",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Yeni Görünüş ve Hissiyat",
+                "message":"Farklı bir şeyler dikkatinizi çekti mi? Görünüşümüzü modern hale getirdik ve öğrenme hedeflerinizi başarmanızı daha kolay hale getirecek güncellemeler yapmaya başladık."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Bir Bakışta Tüm Ders Tarihleri",
+                "message":"Tarihler sekmesinde bir bakışta dersinize dair tüm önemli tarihleri görün. Bir daha hiçbir son teslim tarihini kaçırmayacaksınız!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"Kişiselleştirilmiş Öğrenme Programları",
+                "message":"Kendi hızınıza uygun bir derse kayıt olduğunuzda, artık kişiselleştirilmiş öğrenme programınızı bitiş tarihleri ile birlikte telefonunuzda görebilirsiniz. Ayrıca programınızı düzenlemek isterseniz bitiş tarihlerini kaydırabilirsiniz; sizin dersiniz, sizin tarzınız!"
+            }
+        ]
+    },
+    {
+        "version":"2.23",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Geliştirilmiş Keşif Deneyimi",
+                "message":"En sevdiğiniz kursları ve programları arama ve bunlara kaydolma şeklinizi geliştirdik."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Apple ile Oturum Açma",
+                "message":"Artık platformumuza kaydolmak ve oturum açmak için Apple Kimliğinizi kullanabilirsiniz. Tatlı değil mi?"
+            }
+        ]
+    },
+    {
+        "version":"2.22",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Diğer oynatma hızı seçenekleri",
+                "message":"İhtiyaçlarınızı karşılamak için video hızını kontrol etmek için daha fazla seçenek ekledik."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Videoları geri alma ve iletme",
+                "message":"Sizi duyduk! Artık önemli olduğu noktaya ulaşmak için videoları geri veya ileri sarabilirsiniz."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"İPad için geliştirmeler",
+                "message":"Kurslarım ekranı artık iPad'lerde çalışacak şekilde optimize edildi."
+            }
+        ]
+    },
+    {
+        "version":"2.21",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"ChromeCast Desteği",
+                "message":"Videoları daha geniş ekranda mı izlemek istiyorsunuz? Yeni eklenen ChromeCast desteğiyle artık izleyebilirsiniz!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"YouTube Oynatıcısı",
+                "message":"YouTube ders videolarını izlemek için uygulamadan çıkmaktan sıkılmadınız mı? Artık uygulama içi oynatıcıyla videolarınızı izleyebilirsiniz."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"Microsoft Giriş",
+                "message":"Artık Microsoft hesabınızla kayıt olabilir ya da giriş yapabilirsiniz."
+            }
+        ]
+    },
+    {
+        "version":"2.20",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Genişletilmiş Dil Desteği",
+                "message":"EdX uygulamasını şimdi Almanca, İbranice, Fransızca, Portekizce, Çince ve Türkçe olarak görüntüleyebilirsiniz. Uygulama, bu ayarı belirlemek için cihaz."
+            }
+        ]
+    },
+    {
+        "version":"2.18",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Program & Degree Discovery",
+                "message":"You can now search edX programs and degrees using the mobile application!"
+            }
+        ]
+    },
+    {
+        "version":"2.16",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Programs on Mobile",
+                "message":"You can now view your edX programs on the go!"
+            }
+        ]
+    },
+    {
+        "version":"2.15",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Landscape and Rotation Support",
+                "message":"You can now rotate your iPhone or iPad for improved viewing on most areas of the application."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Show Popular Subjects in Course Discovery",
+                "message":"Browse courses by subject when you are looking for new learning experiences!"
+            }
+        ]
+    },
+    {
+        "version":"2.14",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Bulk Download Subsection Videos",
+                "message":"Easily download all videos within a subsection using the new toggle controls."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Improved Video Streaming Quality",
+                "message":"Video streaming quality will now adapt based on your network. Improve video quality even further by connecting to a WiFi network!"
+            }
+        ]
+    },
+    {
+        "version":"2.13",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Navigation",
+                "message":"Quickly access your courses or discover new courses using the new application navigation."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Bulk Video Download",
+                "message":"Easily download all videos within a course using the new toggle control."
+            }
+        ]
+    },
+    {
+        "version":"2.12",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Course Navigation",
+                "message":"Quickly jump to course videos, discussions, and important dates in your course using new in-course navigation."
+            }
+        ]
+    },
+    {
+        "version":"2.11",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Updated Navigation",
+                "message":"A simplified main menu makes it easier to access and discover courses."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Assignment Due Dates",
+                "message":"You can now see due dates for assignments in the course outline."
+            }
+        ]
+    },
+    {
+        "version":"2.10",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Videos",
+                "message":"The \"Videos\" tab in each course's menu replaces \"My Videos\" in the main menu. Now you can view all the videos in a course in one place!"
+            },
+            {
+                "platforms":[
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"In the list of downloaded course videos, use a long press to select videos that you want to delete."
+            },
+            {
+                "platforms":[
+                    "ios"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"Swipe left to delete downloaded videos."
+            }
+        ]
+    }
+]

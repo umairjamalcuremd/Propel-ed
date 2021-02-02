@@ -1,0 +1,299 @@
+[
+    {
+        "version":"2.24",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Novo visual",
+                "message":"Percebeu algo diferente? Modernizamos nosso visual e começamos a fazer algumas atualizações que ajudarão você a alcançar suas metas de aprendizado com mais facilidade."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Todas as datas do curso em um só lugar",
+                "message":"Veja todas as datas importantes do seu curso em um só lugar na guia \"Datas\". Você nunca mais perderá um prazo!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"Cronogramas de aprendizado personalizados",
+                "message":"Quando você está matriculado em um curso que segue o seu ritmo, agora é possível ver seu cronograma de aprendizado personalizado com as datas de entrega no seu telefone. Também é possível alterar as datas de entrega quando você precisa ajustar seu cronograma: é o seu curso do seu jeito!"
+            }
+        ]
+    },
+    {
+        "version":"2.23",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Experiência de descoberta aprimorada",
+                "message":"Melhoramos a maneira como você pesquisa e se inscreve em seus cursos e programas favoritos."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Login da Apple",
+                "message":"Agora você pode usar seu ID Apple para se registrar e entrar em nossa plataforma. Doce, não é?"
+            }
+        ]
+    },
+    {
+        "version":"2.22",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Mais opções de velocidade de reprodução",
+                "message":"Adicionamos mais opções para controlar a velocidade do vídeo para atender às suas necessidades."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Retroceder e encaminhar vídeos",
+                "message":"Nós ouvimos você! Agora você pode retroceder ou encaminhar os vídeos para chegar ao ponto exato em que isso importa."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"Melhorias para iPad",
+                "message":"A tela Meus cursos agora está otimizada para funcionar em iPads."
+            }
+        ]
+    },
+    {
+        "version":"2.21",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Suporte para o Chromecast",
+                "message":"Quer assistir a vídeos do curso em uma tela maior? Com a adição do suporte para o Chromecast, agora você pode!"
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Player do YouTube",
+                "message":"Está cansado de sair do app para assistir a vídeos do curso no YouTube? Agora você pode visualizá-los em um player integrado ao app."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_3",
+                "title":"Login da Microsoft",
+                "message":"Agora você pode se cadastrar ou fazer login com uma conta da Microsoft."
+            }
+        ]
+    },
+    {
+        "version":"2.20",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Suporte expandido ao idioma",
+                "message":"Agora você pode ver o aplicativo edX em língua alemã, hebraico, francês, português, chinês e turco. O aplicativo usa o idioma do seu dispositivo para especificar essa configuração."
+            }
+        ]
+    },
+    {
+        "version":"2.18",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Program & Degree Discovery",
+                "message":"You can now search edX programs and degrees using the mobile application!"
+            }
+        ]
+    },
+    {
+        "version":"2.16",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Programs on Mobile",
+                "message":"You can now view your edX programs on the go!"
+            }
+        ]
+    },
+    {
+        "version":"2.15",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Landscape and Rotation Support",
+                "message":"You can now rotate your iPhone or iPad for improved viewing on most areas of the application."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Show Popular Subjects in Course Discovery",
+                "message":"Browse courses by subject when you are looking for new learning experiences!"
+            }
+        ]
+    },
+    {
+        "version":"2.14",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Bulk Download Subsection Videos",
+                "message":"Easily download all videos within a subsection using the new toggle controls."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Improved Video Streaming Quality",
+                "message":"Video streaming quality will now adapt based on your network. Improve video quality even further by connecting to a WiFi network!"
+            }
+        ]
+    },
+    {
+        "version":"2.13",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Navigation",
+                "message":"Quickly access your courses or discover new courses using the new application navigation."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Bulk Video Download",
+                "message":"Easily download all videos within a course using the new toggle control."
+            }
+        ]
+    },
+    {
+        "version":"2.12",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Improved Course Navigation",
+                "message":"Quickly jump to course videos, discussions, and important dates in your course using new in-course navigation."
+            }
+        ]
+    },
+    {
+        "version":"2.11",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Updated Navigation",
+                "message":"A simplified main menu makes it easier to access and discover courses."
+            },
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Assignment Due Dates",
+                "message":"You can now see due dates for assignments in the course outline."
+            }
+        ]
+    },
+    {
+        "version":"2.10",
+        "messages":[
+            {
+                "platforms":[
+                    "ios",
+                    "android"
+                ],
+                "image":"screen_1",
+                "title":"Videos",
+                "message":"The \"Videos\" tab in each course's menu replaces \"My Videos\" in the main menu. Now you can view all the videos in a course in one place!"
+            },
+            {
+                "platforms":[
+                    "android"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"In the list of downloaded course videos, use a long press to select videos that you want to delete."
+            },
+            {
+                "platforms":[
+                    "ios"
+                ],
+                "image":"screen_2",
+                "title":"Delete Videos",
+                "message":"Swipe left to delete downloaded videos."
+            }
+        ]
+    }
+]
