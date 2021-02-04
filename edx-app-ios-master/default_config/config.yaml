@@ -1,3 +1,3 @@
-API_HOST_URL: 'https://curemd.edunext.io'
-ENVIRONMENT_DISPLAY_NAME: 'CureMD'
-FEEDBACK_EMAIL_ADDRESS: 'umair.jamal@curemd.com'
+API_HOST_URL: 'http://localhost:8000'
+ENVIRONMENT_DISPLAY_NAME: 'Localhost'
+FEEDBACK_EMAIL_ADDRESS: 'support@example.com'
